@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
 import com.qa.Factory.DriverFactory;
 import com.qa.Util.ConfigReader;

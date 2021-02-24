@@ -30,9 +30,9 @@ public class LoginPageSteps {
 	}
 
 	@Then("page title should be {string}")
-	public void page_title_should_be(String ExpectedTitleNmae) {
+	public void page_title_should_be(String ExpectedTitleName) {
 		
-		Assert.assertTrue(title.contains(ExpectedTitleNmae));
+		Assert.assertTrue(title.contains(ExpectedTitleName));
 	}
 
 	@Then("forgot password link should be displayed")
@@ -58,6 +58,4 @@ public class LoginPageSteps {
 		
 		loginPage.clickOnLogin();
 	}
-
-
 }

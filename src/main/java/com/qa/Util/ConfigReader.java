@@ -7,11 +7,12 @@ import java.util.Properties;
 
 public class ConfigReader {
 	
-	private Properties prop;
+	private static Properties prop;
 	//This method is used to load the properties from config.properties file
 	// it returns Properties prop object
-	public Properties init_prop() {
+	public static Properties init_prop() {
 		try {
+			prop=new Properties();
 			FileInputStream ip=new FileInputStream("./src/test/resources/config/config.properties");
             prop.load(ip);
 			

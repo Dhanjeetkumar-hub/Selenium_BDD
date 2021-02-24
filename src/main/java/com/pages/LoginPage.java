@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
 	private WebDriver driver;
+	private AccountsPage accountsPage;
 	
 	//1. By Locator
 	private By emailId=By.id("email");
@@ -37,5 +38,12 @@ public class LoginPage {
 	
 	public void clickOnLogin() {
 		driver.findElement(signInButton).click();
+	}
+	public AccountsPage doLogin(String uid,String pwd) {
+		System.out.println("login with "+uid+" and "+pwd);
+		driver.findElement(emailId).sendKeys(uid);
+		driver.findElement(password).sendKeys(pwd);
+		driver.findElement(signInButton).click();
+		return new AccountsPage(driver);
 	}
 }
